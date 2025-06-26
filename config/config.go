@@ -5,8 +5,8 @@ import (
 	"gopkg.in/yaml.v3"
 	"net/url"
 	"os"
-	"ytail/client"
-	"ytail/tailer"
+	"ytail/pkg/client"
+	"ytail/pkg/tailer"
 )
 
 // Config is a global config
@@ -18,7 +18,7 @@ type Config struct {
 	ClientConfig client.Config `yaml:"client"`
 }
 
-func ParseConfig(path string) (*Config, error) {
+func ParseFromFile(path string) (*Config, error) {
 	file, err := os.Open(path)
 	if err != nil {
 		return nil, err

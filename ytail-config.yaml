@@ -1,12 +1,13 @@
 tailer:
-  scrape_path: "/home/yusufcan/Desktop/study/go/examples/ytail/log.txt"
+  scrape_path: "/home/yusufcan/Downloads/ytail"
+  file_regex:  ^log-\d{4}-\d{2}-\d{2}\.txt$
 
 client:
   retry:        10
   backoff:      1s
   max_backoff:   1m
   push_url: "http://localhost:3100/loki/api/v1/push"
-  batch_max_size: 100
+  batch_max_size: 256
   batch_max_wait: 1s
   labels:
     service_name: test

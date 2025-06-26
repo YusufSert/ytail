@@ -29,3 +29,6 @@
 | `\d{2}`         | Matches **2 digits** (day)                   |
 | `\.txt`         | Matches `.txt` (escaped `.`)                 |
 | `$`             | Anchors the match to the **end** of string   |
+
+
+go build -o ./bin/ytail ./cmd
